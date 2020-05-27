@@ -7,7 +7,7 @@ using System.Text;
 
 namespace LogisticAppDAL
 {
-    class LogisticDbContext:IdentityDbContext
+    public class LogisticDbContext:IdentityDbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -16,6 +16,7 @@ namespace LogisticAppDAL
 
         }
         public DbSet<Item> Items { get; set; }
+        public DbSet<Item_Category> Item_Categories{ get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Vender> Venders { get; set; }
 
