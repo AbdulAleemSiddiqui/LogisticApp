@@ -151,6 +151,24 @@
     <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Win32.Registry, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Registry.4.5.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
     </Reference>
@@ -165,7 +183,7 @@
       <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -208,6 +226,7 @@
       <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -225,19 +244,76 @@
     <Compile Include="Forms\CompanyForm.Designer.cs">
       <DependentUpon>CompanyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ItemCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ItemCategoryForm.Designer.cs">
       <DependentUpon>ItemCategoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemForm.Designer.cs">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\POForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\POForm.Designer.cs">
+      <DependentUpon>POForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuotationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuotationDetail.Designer.cs">
+      <DependentUpon>QuotationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuotationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuotationForm.Designer.cs">
+      <DependentUpon>QuotationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ItemViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Utility.cs" />
     <EmbeddedResource Include="Forms\CompanyForm.resx">
       <DependentUpon>CompanyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemCategoryForm.resx">
       <DependentUpon>ItemCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemForm.resx">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\POForm.resx">
+      <DependentUpon>POForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuotationDetail.resx">
+      <DependentUpon>QuotationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuotationForm.resx">
+      <DependentUpon>QuotationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -249,7 +325,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\QuotationReport.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Employe.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Bank.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Cheque.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Company.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Delivery_Chalan.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Delivery_Chalan_Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Deposit_Slip.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Invoice.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Invoice_Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Payment.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Item_Category.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.LogisticDbContext.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Migrations.LogisticMigration.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Migrations.LogisticMigration2.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Migrations.newupdate.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.PO.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.PO_Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Purchase_Bill.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Purchase_Bill_Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Quotation.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Quotation_Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Vender.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -268,6 +368,22 @@
       <Project>{ec8b8fd0-3bb9-4282-9f64-0e98e710575e}</Project>
       <Name>LogisticAppDAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

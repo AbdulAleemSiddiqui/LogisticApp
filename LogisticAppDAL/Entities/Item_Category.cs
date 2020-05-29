@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace LogisticAppDAL
+namespace LogisticAppDAL.Entities
 {
     public class Item_Category
     {

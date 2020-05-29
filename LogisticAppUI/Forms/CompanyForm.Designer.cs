@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.components = new System.ComponentModel.Container();
             this.C_Name_txt = new System.Windows.Forms.TextBox();
             this.C_Address_txt = new System.Windows.Forms.TextBox();
             this.C_Contact_txt = new System.Windows.Forms.TextBox();
@@ -37,19 +37,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Back_btn = new System.Windows.Forms.Button();
+            this.cIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cContactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 221);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 217);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             // 
             // C_Name_txt
             // 
@@ -126,25 +124,81 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Company";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cIDDataGridViewTextBoxColumn,
+            this.cNameDataGridViewTextBoxColumn,
+            this.cAddressDataGridViewTextBoxColumn,
+            this.cContactDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.companyBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 212);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(776, 226);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // Back_btn
+            // 
+            this.Back_btn.Location = new System.Drawing.Point(12, 12);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(75, 23);
+            this.Back_btn.TabIndex = 11;
+            this.Back_btn.Text = "Back";
+            this.Back_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
+            // 
+            // cIDDataGridViewTextBoxColumn
+            // 
+            this.cIDDataGridViewTextBoxColumn.DataPropertyName = "C_ID";
+            this.cIDDataGridViewTextBoxColumn.HeaderText = "C_ID";
+            this.cIDDataGridViewTextBoxColumn.Name = "cIDDataGridViewTextBoxColumn";
+            this.cIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cNameDataGridViewTextBoxColumn
+            // 
+            this.cNameDataGridViewTextBoxColumn.DataPropertyName = "C_Name";
+            this.cNameDataGridViewTextBoxColumn.HeaderText = " Name";
+            this.cNameDataGridViewTextBoxColumn.Name = "cNameDataGridViewTextBoxColumn";
+            // 
+            // cAddressDataGridViewTextBoxColumn
+            // 
+            this.cAddressDataGridViewTextBoxColumn.DataPropertyName = "C_Address";
+            this.cAddressDataGridViewTextBoxColumn.HeaderText = " Address";
+            this.cAddressDataGridViewTextBoxColumn.Name = "cAddressDataGridViewTextBoxColumn";
+            // 
+            // cContactDataGridViewTextBoxColumn
+            // 
+            this.cContactDataGridViewTextBoxColumn.DataPropertyName = "C_Contact";
+            this.cContactDataGridViewTextBoxColumn.HeaderText = " Contact";
+            this.cContactDataGridViewTextBoxColumn.Name = "cContactDataGridViewTextBoxColumn";
+            // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataSource = typeof(LogisticAppDAL.Entities.Company);
+            // 
             // CompanyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "CompanyForm";
             this.Text = "Company";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox C_Name_txt;
         private System.Windows.Forms.TextBox C_Address_txt;
         private System.Windows.Forms.TextBox C_Contact_txt;
@@ -153,5 +207,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cContactDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource companyBindingSource;
+        private System.Windows.Forms.Button Back_btn;
     }
 }

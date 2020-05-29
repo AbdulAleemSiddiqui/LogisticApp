@@ -18,23 +18,6 @@ namespace LogisticAppDAL.Migrations
                 .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("LogisticAppDAL.Company", b =>
-                {
-                    b.Property<int>("C_ID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("C_Address");
-
-                    b.Property<string>("C_Contact");
-
-                    b.Property<string>("C_Name")
-                        .IsRequired();
-
-                    b.HasKey("C_ID");
-
-                    b.ToTable("Companies");
-                });
-
             modelBuilder.Entity("LogisticAppDAL.Employe", b =>
                 {
                     b.Property<int>("E_ID")
@@ -87,6 +70,23 @@ namespace LogisticAppDAL.Migrations
                     b.HasIndex("bankB_Id");
 
                     b.ToTable("Cheques");
+                });
+
+            modelBuilder.Entity("LogisticAppDAL.Entities.Company", b =>
+                {
+                    b.Property<int>("C_ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("C_Address");
+
+                    b.Property<string>("C_Contact");
+
+                    b.Property<string>("C_Name")
+                        .IsRequired();
+
+                    b.HasKey("C_ID");
+
+                    b.ToTable("Companies");
                 });
 
             modelBuilder.Entity("LogisticAppDAL.Entities.Delivery_Chalan", b =>
@@ -608,7 +608,7 @@ namespace LogisticAppDAL.Migrations
 
             modelBuilder.Entity("LogisticAppDAL.Employe", b =>
                 {
-                    b.HasOne("LogisticAppDAL.Company", "company")
+                    b.HasOne("LogisticAppDAL.Entities.Company", "company")
                         .WithMany("employes")
                         .HasForeignKey("companyC_ID");
                 });
@@ -626,7 +626,7 @@ namespace LogisticAppDAL.Migrations
                         .WithMany()
                         .HasForeignKey("PO_ID");
 
-                    b.HasOne("LogisticAppDAL.Company", "company")
+                    b.HasOne("LogisticAppDAL.Entities.Company", "company")
                         .WithMany()
                         .HasForeignKey("companyC_ID");
                 });
@@ -739,7 +739,7 @@ namespace LogisticAppDAL.Migrations
 
             modelBuilder.Entity("LogisticAppDAL.Quotation", b =>
                 {
-                    b.HasOne("LogisticAppDAL.Company", "company")
+                    b.HasOne("LogisticAppDAL.Entities.Company", "company")
                         .WithMany()
                         .HasForeignKey("companyC_ID");
                 });
@@ -747,7 +747,7 @@ namespace LogisticAppDAL.Migrations
             modelBuilder.Entity("LogisticAppDAL.Quotation_Item", b =>
                 {
                     b.HasOne("LogisticAppDAL.Quotation", "quotation")
-                        .WithMany()
+                        .WithMany("items")
                         .HasForeignKey("Q_ID")
                         .OnDelete(DeleteBehavior.Cascade);
 

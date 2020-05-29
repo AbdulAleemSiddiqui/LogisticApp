@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.2</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,9 +16,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
+ 
     <Reference Include="Microsoft.EntityFrameworkCore">
       <HintPath>..\..\OrganizationService\OrgDAL\bin\Debug\net461\Microsoft.EntityFrameworkCore.dll</HintPath>
     </Reference>
@@ -31,9 +33,16 @@
     <Reference Include="Microsoft.EntityFrameworkCore.SqlServer">
       <HintPath>..\..\OrganizationService\OrgDAL\bin\Debug\net461\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>..\..\..\..\.nuget\packages\system.componentmodel.annotations\4.7.0\lib\netstandard2.0\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.SqlClient">
       <HintPath>..\..\OrganizationService\OrgDAL\bin\Debug\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helper\" />
   </ItemGroup>
 
 </Project>

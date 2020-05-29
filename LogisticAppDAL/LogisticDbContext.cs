@@ -15,6 +15,7 @@ namespace LogisticAppDAL
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-Q78RQP5\SQLEXPRESS;Initial Catalog=LogisticDb;Integrated Security=True");
 
         }
+        
         public DbSet<Item> Items { get; set; }
         public DbSet<Item_Category> Item_Categories{ get; set; }
         public DbSet<Company> Companies { get; set; }

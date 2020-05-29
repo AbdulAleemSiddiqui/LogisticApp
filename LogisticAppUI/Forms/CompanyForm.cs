@@ -1,4 +1,5 @@
 ﻿using LogisticAppDAL;
+using LogisticAppDAL.Entities;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -46,31 +47,30 @@ namespace LogisticAppUI
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var senderGrid = (DataGridView)sender;
-      
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            var id = Utility.GetIdFromGrid((DataGridView)sender, e.ColumnIndex, e.RowIndex);
+            if (id>0)
             {
-                int rowIndex = e.RowIndex;
-                DataGridViewRow row = senderGrid.Rows[rowIndex];
-                var id =(int) row.Cells[1].Value;
+                
                 var data = dbContext.Companies.Where(x => x.C_ID ==id).FirstOrDefault();
                 dbContext.Remove(data);
                 dbContext.SaveChanges();
                 Refresh();
             }
         }
-
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            Company company = (Company)dataGridView1.CurrentRow.DataBoundItem;
-            dbContext.Update<Company>(company);
-            dbContext.SaveChanges();
+            Utility.Update(dataGridView1);
         }
         public void ClearTextBox()
         {
             C_Name_txt.Clear();
             C_Address_txt.Clear();
             C_Contact_txt.Clear();
+        }
+
+        private void Back_btn_Click(object sender, EventArgs e)
+        {
+            Utility.BackButton(this);
         }
     }
 }

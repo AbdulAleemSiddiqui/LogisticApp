@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace LogisticAppDAL.Entities
 {
-    public class Bank
+    public sealed class Bank
     {
         [Key]
         public int B_Id { get; set; }

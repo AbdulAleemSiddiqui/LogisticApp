@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace LogisticAppDAL
+namespace LogisticAppDAL.Entities
 {
     public class Purchase_Bill
     {
