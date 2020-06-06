@@ -38,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Back_btn = new System.Windows.Forms.Button();
             this.cIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -140,16 +139,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 226);
             this.dataGridView1.TabIndex = 8;
             // 
-            // Back_btn
-            // 
-            this.Back_btn.Location = new System.Drawing.Point(12, 12);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(75, 23);
-            this.Back_btn.TabIndex = 11;
-            this.Back_btn.Text = "Back";
-            this.Back_btn.UseVisualStyleBackColor = true;
-            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
-            // 
             // cIDDataGridViewTextBoxColumn
             // 
             this.cIDDataGridViewTextBoxColumn.DataPropertyName = "C_ID";
@@ -184,12 +173,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "CompanyForm";
             this.Text = "Company";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.CompanyForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -213,6 +202,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cAddressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cContactDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource companyBindingSource;
-        private System.Windows.Forms.Button Back_btn;
     }
 }

@@ -11,7 +11,10 @@ namespace LogisticAppUI
         public CompanyForm()
         {
             InitializeComponent();
-            dbContext = new LogisticAppDAL.LogisticDbContext();
+
+            dataGridView1.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom);
+
+            dbContext = new LogisticDbContext();
             Refresh();
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Name";
@@ -71,6 +74,11 @@ namespace LogisticAppUI
         private void Back_btn_Click(object sender, EventArgs e)
         {
             Utility.BackButton(this);
+        }
+
+        private void CompanyForm_Load(object sender, EventArgs e)
+        {
+            Utility.FormSetting(this, groupBox1);
         }
     }
 }

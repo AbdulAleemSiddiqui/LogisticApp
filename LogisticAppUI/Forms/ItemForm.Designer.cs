@@ -43,7 +43,6 @@
             this.Quantity_txt = new System.Windows.Forms.TextBox();
             this.Description_txt = new System.Windows.Forms.TextBox();
             this.Unit_txt = new System.Windows.Forms.ComboBox();
-            this.Back_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -204,16 +203,6 @@
             this.Unit_txt.Size = new System.Drawing.Size(100, 21);
             this.Unit_txt.TabIndex = 7;
             // 
-            // Back_btn
-            // 
-            this.Back_btn.Location = new System.Drawing.Point(12, 12);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(75, 23);
-            this.Back_btn.TabIndex = 11;
-            this.Back_btn.Text = "Back";
-            this.Back_btn.UseVisualStyleBackColor = true;
-            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -298,14 +287,13 @@
             // itemBindingSource
             // 
             this.itemBindingSource.DataSource = typeof(LogisticAppDAL.Entities.Item);
-            // .
+            // 
             // ItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.groupBox1);
             this.Name = "ItemForm";
             this.Text = "ItemForm";
@@ -334,7 +322,6 @@
         private System.Windows.Forms.TextBox Description_txt;
         private System.Windows.Forms.ComboBox Category_txt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button Back_btn;
         private System.Windows.Forms.Button Save_btn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;

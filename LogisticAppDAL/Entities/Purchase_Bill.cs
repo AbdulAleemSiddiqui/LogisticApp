@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -18,11 +20,12 @@ namespace LogisticAppDAL.Entities
         public decimal Total { get; set; }
         public decimal Balance{ get; set; }
 
-        public PO po { get; set; }
+        public  PO po { get; set; }
         public Vender vender { get; set; }
 
         public ICollection<Purchase_Bill_Item> items{ get; set; }
 
 
     }
+
 }

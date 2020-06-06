@@ -14,12 +14,15 @@ namespace LogisticAppUI.Forms
         public QuotationForm()
         {
             InitializeComponent();
+            dataGridView1.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom);
+
         }
         LogisticDbContext dbContext = new LogisticDbContext();
         Quotation quotation = new Quotation() ;
         List<Quotation_Item> Quotation_Items = new List<Quotation_Item>();
         private void QuotationForm_Load(object sender, EventArgs e)
         {
+            Utility.FormSetting(this, groupBox1);
             QDate_txt.Text = DateTime.Now.ToShortDateString();
             Qno_txt.Text =( "QNo#"+(dbContext.Quotations.Count()+ 1).ToString());
 
@@ -45,8 +48,6 @@ namespace LogisticAppUI.Forms
             }
 
         }
-
-
 
         private void Save_btn_Click(object sender, EventArgs e)
         {

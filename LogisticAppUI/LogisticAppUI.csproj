@@ -250,6 +250,42 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DeliveryChallanDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeliveryChallanDetailForm.Designer.cs">
+      <DependentUpon>DeliveryChallanDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeliveryChallanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeliveryChallanForm.Designer.cs">
+      <DependentUpon>DeliveryChallanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExpenseCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExpenseCategoryForm.Designer.cs">
+      <DependentUpon>ExpenseCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExpenseForm.Designer.cs">
+      <DependentUpon>ExpenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InvoiceDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvoiceDetailForm.Designer.cs">
+      <DependentUpon>InvoiceDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ItemCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,11 +298,41 @@
     <Compile Include="Forms\ItemForm.Designer.cs">
       <DependentUpon>ItemForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PaymentInnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentInnForm.Designer.cs">
+      <DependentUpon>PaymentInnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentOutForm.Designer.cs">
+      <DependentUpon>PaymentOutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PODetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PODetail.Designer.cs">
+      <DependentUpon>PODetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\POForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\POForm.Designer.cs">
       <DependentUpon>POForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PurchasingDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PurchasingDetailForm.Designer.cs">
+      <DependentUpon>PurchasingDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PurchasingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PurchasingForm.Designer.cs">
+      <DependentUpon>PurchasingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\QuotationDetail.cs">
       <SubType>Form</SubType>
@@ -286,6 +352,12 @@
     <Compile Include="Forms\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VendorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VendorForm.Designer.cs">
+      <DependentUpon>VendorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\ItemViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -297,14 +369,47 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeliveryChallanDetailForm.resx">
+      <DependentUpon>DeliveryChallanDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeliveryChallanForm.resx">
+      <DependentUpon>DeliveryChallanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExpenseCategoryForm.resx">
+      <DependentUpon>ExpenseCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExpenseForm.resx">
+      <DependentUpon>ExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvoiceDetailForm.resx">
+      <DependentUpon>InvoiceDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemCategoryForm.resx">
       <DependentUpon>ItemCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForm.resx">
       <DependentUpon>ItemForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentInnForm.resx">
+      <DependentUpon>PaymentInnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentOutForm.resx">
+      <DependentUpon>PaymentOutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PODetail.resx">
+      <DependentUpon>PODetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\POForm.resx">
       <DependentUpon>POForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PurchasingDetailForm.resx">
+      <DependentUpon>PurchasingDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PurchasingForm.resx">
+      <DependentUpon>PurchasingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\QuotationDetail.resx">
       <DependentUpon>QuotationDetail.cs</DependentUpon>
@@ -314,6 +419,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VendorForm.resx">
+      <DependentUpon>VendorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -334,9 +442,23 @@
     <None Include="Properties\DataSources\LogisticAppDAL.Entities.Delivery_Chalan.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.Entities.Delivery_Chalan_Item.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.Entities.Deposit_Slip.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Employe.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Expense.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Expense_Category.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.Entities.Invoice.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.Entities.Invoice_Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Item_Category.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.Entities.Payment.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.PaymentInn.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.PaymentOut.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.PO.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.PO_Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Purchase_Bill.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Purchase_Bill_Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Quotation.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Quotation_Item.datasource" />
+    <None Include="Properties\DataSources\LogisticAppDAL.Entities.Vender.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.Item.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.Item_Category.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.LogisticDbContext.datasource" />
@@ -369,7 +491,6 @@
       <Name>LogisticAppDAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

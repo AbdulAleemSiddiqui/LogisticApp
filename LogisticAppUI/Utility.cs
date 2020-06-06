@@ -1,6 +1,7 @@
 ﻿using LogisticAppDAL;
 using LogisticAppUI.Forms;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace LogisticAppUI
@@ -14,6 +15,12 @@ namespace LogisticAppUI
             b.ShowDialog();
             form.Close();
         }
+        public static void FormSetting(Form form , GroupBox groupBox1)
+        {
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.WindowState = FormWindowState.Maximized;
+            groupBox1.Location = new Point(form.ClientSize.Width / 2 - groupBox1.Size.Width / 2, groupBox1.Location.Y);
+        }
         public static void Update(DataGridView dataGridView1)
         {
             using (LogisticDbContext dbContext = new LogisticDbContext())
@@ -26,7 +33,6 @@ namespace LogisticAppUI
         }
         public static int GetIdFromGrid(DataGridView senderGrid,int ColumnIndex,int RowIndex)
         {
-
             if (senderGrid.Columns[ ColumnIndex] is DataGridViewButtonColumn &&  RowIndex >= 0)
             {
                 int rowIndex =  RowIndex;

@@ -13,12 +13,13 @@ namespace LogisticAppUI.Forms
         public QuotationDetail()
         {
             InitializeComponent();
+            dataGridView1.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
+            dataGridView2.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom);
         }
         LogisticDbContext dbContext = new LogisticDbContext();
 
         private void QuotationDetail_Load(object sender, EventArgs e)
         {
-            quotationBindingSource.DataSource = dbContext.Quotations.ToList<Quotation>();
             quotationBindingSource.DataSource = dbContext.Quotations.ToList<Quotation>();
             companyBindingSource.DataSource = dbContext.Companies.ToList<Company>();
 

@@ -26,6 +26,7 @@ namespace LogisticAppUI.Forms
             col.Name = "Delete";
             dataGridView1.Columns.Add(col);
             dataGridView1.CellClick += new DataGridViewCellEventHandler(dataGridView1_CellContentClick);
+            dataGridView1.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom);
 
         }
 
@@ -76,6 +77,7 @@ namespace LogisticAppUI.Forms
 
         private void ItemCategoryForm_Load(object sender, EventArgs e)
         {
+            Utility.FormSetting(this, groupBox1);
             itemCategoryBindingSource.DataSource = dbContext.Item_Categories.ToList<Item_Category>();
         }
     }

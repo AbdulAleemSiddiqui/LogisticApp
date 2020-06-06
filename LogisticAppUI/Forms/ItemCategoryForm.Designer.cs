@@ -33,7 +33,6 @@
             this.Name_txt = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Save_btn = new System.Windows.Forms.Button();
-            this.Back_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,16 +80,6 @@
             this.Save_btn.UseVisualStyleBackColor = true;
             this.Save_btn.Click += new System.EventHandler(this.Save_btn_Click);
             // 
-            // Back_btn
-            // 
-            this.Back_btn.Location = new System.Drawing.Point(12, 12);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(75, 23);
-            this.Back_btn.TabIndex = 10;
-            this.Back_btn.Text = "Back";
-            this.Back_btn.UseVisualStyleBackColor = true;
-            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -128,7 +117,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.groupBox1);
             this.Name = "ItemCategoryForm";
             this.Text = "Item_Category_Form";
@@ -146,7 +134,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Name_txt;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button Back_btn;
         private System.Windows.Forms.Button Save_btn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource itemCategoryBindingSource;

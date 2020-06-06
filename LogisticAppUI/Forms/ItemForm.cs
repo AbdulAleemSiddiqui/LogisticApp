@@ -18,7 +18,8 @@ namespace LogisticAppUI.Forms
             InitializeComponent();
             dbContext = new LogisticAppDAL.LogisticDbContext();
             Refresh();
-           // ConfigureGrid();
+            // ConfigureGrid();
+            dataGridView1.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom);
 
             var category = dbContext.Item_Categories.ToList<Item_Category>();
             if (category.Count() != 0)
@@ -70,6 +71,7 @@ namespace LogisticAppUI.Forms
 
         private void ItemForm_Load(object sender, EventArgs e)
         {
+            Utility.FormSetting(this, groupBox1);
             itemBindingSource.DataSource = dbContext.Items.ToList<Item>();
             itemCategoryBindingSource.DataSource = dbContext.Item_Categories.ToList<Item_Category>();
         }

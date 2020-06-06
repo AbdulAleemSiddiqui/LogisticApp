@@ -38,7 +38,6 @@
             this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quotationItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Back_btn = new System.Windows.Forms.Button();
             this.Save_btn = new System.Windows.Forms.Button();
             this.Company_txt = new System.Windows.Forms.ComboBox();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -86,18 +85,21 @@
             // 
             // Item_Name
             // 
+            this.Item_Name.DataPropertyName = "Item_Name";
             this.Item_Name.HeaderText = "Name";
             this.Item_Name.Name = "Item_Name";
             this.Item_Name.ReadOnly = true;
             // 
             // Unit
             // 
+            this.Unit.DataPropertyName = "Unit";
             this.Unit.HeaderText = "Unit";
             this.Unit.Name = "Unit";
             this.Unit.ReadOnly = true;
             // 
             // Description
             // 
+            this.Description.DataPropertyName = "Description";
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
             // 
@@ -120,16 +122,6 @@
             // itemBindingSource
             // 
             this.itemBindingSource.DataSource = typeof(LogisticAppDAL.Entities.Item);
-            // 
-            // Back_btn
-            // 
-            this.Back_btn.Location = new System.Drawing.Point(12, 12);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(75, 23);
-            this.Back_btn.TabIndex = 14;
-            this.Back_btn.Text = "Back";
-            this.Back_btn.UseVisualStyleBackColor = true;
-            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
             // Save_btn
             // 
@@ -296,7 +288,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.groupBox1);
             this.Name = "QuotationForm";
             this.Text = "QuotationForm";
@@ -314,7 +305,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button Back_btn;
         private System.Windows.Forms.Button Save_btn;
         private System.Windows.Forms.ComboBox Company_txt;
         private System.Windows.Forms.Label label6;
