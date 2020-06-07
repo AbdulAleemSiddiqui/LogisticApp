@@ -198,7 +198,7 @@
             // 
             // itemIDDataGridViewTextBoxColumn
             // 
-            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "Item_ID";
+            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "I_ID";
             this.itemIDDataGridViewTextBoxColumn.HeaderText = "Item_ID";
             this.itemIDDataGridViewTextBoxColumn.Name = "itemIDDataGridViewTextBoxColumn";
             this.itemIDDataGridViewTextBoxColumn.Visible = false;

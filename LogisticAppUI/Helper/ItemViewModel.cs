@@ -18,7 +18,7 @@ namespace LogisticAppUI.Helper
         public string Category{ get; set; }
 
         public string Company { get; set; }
-
+        public DateTime Date { get; set; }
         public decimal Total { get; set; }
     }
 }

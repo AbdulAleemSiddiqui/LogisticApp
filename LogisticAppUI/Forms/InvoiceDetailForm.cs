@@ -61,12 +61,12 @@ namespace LogisticAppUI.Forms
                 DataGridViewRow row = ((DataGridView)sender).Rows[rowIndex];
                 var id = (int)row.Cells[0].Value;
 
-                ReportForm reportForm = new ReportForm();
+                ReportForm reportForm = new ReportForm(id);
                 reportForm.ShowDialog();
             }
             else
             {
-                var id = ((int)dataGridView1.CurrentRow.Cells[0].Value);
+                var id = ((int)dataGridView1.CurrentRow.Cells[1].Value);
                 var data = dbContext.Invoice_Items.Where(x => x.Invoice_ID== id).Include(x => x.Item)
                     .Select(x => new
                     {

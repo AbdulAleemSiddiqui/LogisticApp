@@ -39,7 +39,7 @@ namespace LogisticAppUI.Forms
                 DataGridViewRow row = ((DataGridView)sender).Rows[rowIndex];
                 var id = (int)row.Cells[0].Value;
 
-                ReportForm reportForm = new ReportForm();
+                ReportForm reportForm = new ReportForm(id);
                 reportForm.ShowDialog();
             }
             else
