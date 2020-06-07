@@ -17,6 +17,8 @@ namespace LogisticAppUI.Helper
         public decimal Quoted_Amount { get; set; }
         public string Category{ get; set; }
 
+        public string Company { get; set; }
+
         public decimal Total { get; set; }
     }
 }

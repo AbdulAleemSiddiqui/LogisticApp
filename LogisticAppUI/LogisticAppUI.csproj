@@ -472,6 +472,7 @@
     <None Include="Properties\DataSources\LogisticAppDAL.Quotation.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.Quotation_Item.datasource" />
     <None Include="Properties\DataSources\LogisticAppDAL.Vender.datasource" />
+    <None Include="Properties\DataSources\LogisticAppUI.Helper.ItemViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
